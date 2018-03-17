@@ -1,4 +1,4 @@
-FROM rails
+FROM ruby:2.4
 
 RUN curl -sSL "https://ftp.mozilla.org/pub/firefox/releases/59.0/linux-x86_64/en-US/firefox-59.0.tar.bz2" -o /tmp/firefox.tar.bz2 \
     && mkdir -p /opt/firefox \
