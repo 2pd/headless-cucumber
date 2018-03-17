@@ -14,7 +14,9 @@ RUN cd /tmp && \
     mv geckodriver /usr/local/bin && \
     rm geckodriver-v0.16.0-linux64.tar.gz
 
-RUN bundle install
-
 RUN apt-get update && \
     apt-get install -y --fix-missing nodejs iceweasel xvfb
+
+RUN apt-get clean  && \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
